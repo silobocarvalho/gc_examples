@@ -1,13 +1,11 @@
 name: Github Actions Example Cron
 run-name: ${{github.actor}} está testando o Github Actions
 on:
+  workflow_dispatch:
   schedule:
     - cron: '0 13 * * 5'
 jobs:
-    Explore-Github-Actions:
-        runs-on: ubuntu-latest
-        steps:
-            - run: echo "Esta pipeline está rodando todas as sextas-feiras as 13h"
-
-
-
+  Explore-Github-Actions:
+      runs-on: ubuntu-latest
+      steps:
+          - run: echo "Esta pipeline está rodando todas as sextas-feiras as 13h"
